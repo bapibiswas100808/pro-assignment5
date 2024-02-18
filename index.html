@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- External Css -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/43ff3a26aa.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Tailwind and Daisy -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -13,10 +16,141 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- External Css -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="text-red-700 font-raleway"><h1>This is Header</h1></header>
-    <main><p>This is Main</p></main>
+    <!-- Header Area Starts -->
+    <header>
+      <nav>
+        <div class="navbar max-w-[1170px] mx-auto">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li>
+                  <a>About</a>
+                </li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <h3 class="text-lg lg:text-3xl font-bold">T-Line</h3>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li>
+                <a>About</a>
+              </li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn btn-one"
+              >Bus<i class="fa-solid fa-van-shuttle"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header Area Ends -->
+
+    <main>
+      <!-- Banner Area Starts -->
+      <div class="Banner-area max-w-[1170px] mx-auto px-3 lg:px-0 mt-7">
+        <div
+          class="hero lg:min-h-screen rounded-3xl"
+          style="background-image: url(./images/banner.png)"
+        >
+          <div class="bg-opacity-60 rounded-3xl"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-3xl">
+              <h1 class="mb-5 text-2xl lg:text-6xl font-bold text-white">
+                End-To-End Travel With <br />
+                <span class="text-[#1dd100] text-2xl lg:text-6xl font-bold">
+                  T-Line</span
+                >
+              </h1>
+              <p class="mb-5 text-white">
+                T Line bus service offers efficient transportation, timely
+                schedules, and convenient routes, ensuring reliable commuting
+                experiences for passengers daily.
+              </p>
+              <button class="btn bg-[#1dd100] text-sm lg:text-xl border-0">
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner Area Ends -->
+
+      <!-- Offers Area Starts -->
+      <div
+        class="offers-area max-w-[1170px] mx-auto mt-6 lg:mt-28 px-3 lg:px-0"
+      >
+        <h3 class="text-center text-2xl lg:text-4xl font-bold mb-5 lg:mb-12">
+          Best Offers For You
+        </h3>
+        <div
+          class="total-offers flex flex-col lg:flex-row justify-center items-center gap-6"
+        >
+          <div
+            class="offer-one bg-[#ffbf0f] rounded-3xl flex items-center justify-between px-5 lg:px-10 flex-1"
+          >
+            <div class="offer-one-left">
+              <h3 class="text-xl lg:text-3xl font-bold">15% OFF</h3>
+              <p class="text-sm lg:text-xl font-bold">On your Next Purchase</p>
+              <p>Use by July, 2024</p>
+            </div>
+            <img src="./images/cupon-devider.png" alt="" />
+            <div class="offer-one-right">
+              <h3 class="text-xl lg:text-2xl font-bold">NEW15</h3>
+              <p>Coupon Code</p>
+            </div>
+          </div>
+          <div
+            class="offer-two bg-[#f78c9c] rounded-3xl flex items-center justify-between px-5 lg:px-10 flex-1"
+          >
+            <div class="offer-two-left">
+              <h3 class="text-xl lg:text-3xl font-bold">20% OFF</h3>
+              <p class="text-sm lg:text-xl font-bold">On your Next Purchase</p>
+              <p>Use by July, 2024</p>
+            </div>
+            <img src="./images/cupon-devider.png" alt="" />
+            <div class="offer-two-right">
+              <h3 class="text-xl lg:text-2xl font-bold">Couple20</h3>
+              <p>Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 lg:mt-14">
+          <button class="btn btn-one text-sm lg:text-xl">See All Offers</button>
+        </div>
+      </div>
+      <!-- Offers Area Ends -->
+    </main>
     <footer>This is footer</footer>
     <script src="script.js"></script>
   </body>

@@ -7,11 +7,30 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+  color: #030712;
+  font-size: 40px;
+  font-weight: 700;
 }
-button,
 span,
 input,
 p,
 a {
   font-family: "Inter", sans-serif;
+  color: #030712b3;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-one {
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #1dd10066;
+  border-radius: 12px;
+  background: #1dd1001a;
+  color: #1dd100;
+  font-weight: 700;
+}
+.test {
+  border-radius: 24px;
+
+  background: #f78c9c;
 }
