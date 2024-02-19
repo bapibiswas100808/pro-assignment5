@@ -156,6 +156,7 @@
         class="ticket-area border-t-4 rounded-2xl lg:rounded-[90px] border-[#1dd100] mt-5 lg:mt-28 bg-[#f7f8f8] pb-10"
       >
         <div class="ticket-zone max-w-[1170px] mx-auto mt-10 lg:mt-28">
+          <!-- ticket heading -->
           <div class="text-center max-w-[736px] mx-auto px-3 lg:px-0">
             <h2 class="text-2xl lg:text-4xl font-bold mb-4 lg:mb-6">T-Line</h2>
             <p class="mb-4 lg:mb-12">
@@ -164,12 +165,11 @@
               across the city.
             </p>
           </div>
+          <!-- Ticket Top -->
           <div
             class="ticket-details flex flex-col lg:flex-row justify-between bg-white rounded-3xl mb-10"
           >
-            <div
-              class="ticket-info flex-1 p-3 lg:p-10 border-0 lg:border-r-2 lg:border-dashed lg:border-[#1dd100]"
-            >
+            <div class="ticket-info flex-1 p-3 lg:p-10">
               <div
                 class="ticket-info-top flex items-center justify-between mb-6 px-3 lg:px-0"
               >
@@ -183,7 +183,8 @@
                 <div>
                   <p class="btn-one px-3 py-2 text-sm">
                     <i class="fa-solid fa-chair"></i>
-                    <span class="text-[#1dd100]">0</span> Seats Available!
+                    <span id="available-seat" class="text-[#1dd100]"></span>
+                    Seats Available!
                   </p>
                 </div>
               </div>
@@ -201,18 +202,23 @@
                 <div
                   class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between"
                 >
-                  <p class="bg-[#0307120d] px-5 py-2 rounded-3xl">
+                  <p class="bg-[#0307120d] px-3 py-2 rounded-3xl">
                     Boarding-point- Khulna
                   </p>
-                  <p class="bg-[#0307120d] px-5 py-2 rounded-3xl">
+                  <p class="bg-[#0307120d] px-3 py-2 rounded-3xl">
                     Dropping-point- Dhaka
                   </p>
-                  <p class="bg-[#0307120d] px-5 py-2 rounded-3xl">
+                  <p class="bg-[#0307120d] px-3 py-2 rounded-3xl">
                     Estimated Time-6 Hours
                   </p>
                 </div>
               </div>
             </div>
+            <img
+              class="hidden lg:block"
+              src="./images/info-devider.png"
+              alt=""
+            />
             <div class="ticket-price px-5 lg:px-16 py-10 lg:py-32 text-center">
               <p class="mb-6">
                 <i
@@ -223,12 +229,15 @@
               <p>Per Seat</p>
             </div>
           </div>
+          <!-- Seat Area -->
           <div
             class="seat-area bg-white p-3 lg:p-5 rounded-3xl flex flex-col lg:flex-row"
           >
+            <!-- All Single-Seat select -->
             <div class="seat-numbers flex-1 p-8 w-full lg:max-w-[60%]">
               <h2 class="font-bold text-xl">Select Your Seat</h2>
               <hr class="border-dashed my-3" />
+              <!-- Seat Available or not -->
               <div class="flex justify-between">
                 <p><i class="fa-solid fa-couch mr-3"></i>Available</p>
                 <p class="text-[#1dd100]">
@@ -236,295 +245,309 @@
                 </p>
               </div>
               <hr class="border-dashed my-3" />
+
               <!-- Seat Numbers -->
               <div
-                class="border-0 lg:border-r-2 lg:border-dashed lg:border-[#1dd100] lg:pr-14"
+                class="border-0 lg:border-r-2 lg:border-dashed lg:border-[#1dd100] lg:pr-14 cursor-pointer"
               >
                 <i
                   class="fa-solid fa-circle-radiation text-xl bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg inline-block text-right ml-[86%] md:ml-[93%] lg:ml-[89%] mb-5"
                 ></i>
+                <!-- Seat Line A -->
                 <div class="flex items-center justify-between mb-3">
                   <p>A</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     A1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     A2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     A3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     A4
                   </p>
                 </div>
+                <!-- Seat Line B -->
                 <div class="flex items-center justify-between mb-3">
                   <p>B</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     B1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     B2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     B3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     B4
                   </p>
                 </div>
+                <!-- Seat Line  C-->
                 <div class="flex items-center justify-between mb-3">
                   <p>C</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     C1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     C2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     C3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     C4
                   </p>
                 </div>
+                <!-- Seat Line D -->
                 <div class="flex items-center justify-between mb-3">
                   <p>D</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     D1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     D2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     D3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     D4
                   </p>
                 </div>
+                <!-- Seat Line  E-->
                 <div class="flex items-center justify-between mb-3">
                   <p>E</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     E1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     E2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     E3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     E4
                   </p>
                 </div>
+                <!-- Seat Line F -->
                 <div class="flex items-center justify-between mb-3">
                   <p>F</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     F1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     F2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     F3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     F4
                   </p>
                 </div>
+                <!-- Seat Line  G-->
                 <div class="flex items-center justify-between mb-3">
                   <p>G</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     G1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     G2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     G3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     G4
                   </p>
                 </div>
+                <!-- Seat Line  H-->
                 <div class="flex items-center justify-between mb-3">
                   <p>H</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     H1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     H2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     H3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     H4
                   </p>
                 </div>
+                <!-- Seat Line  I-->
                 <div class="flex items-center justify-between pl-1 mb-3">
                   <p>I</p>
                   <p
-                    class="bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
                   >
                     I1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
                   >
                     I2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
                   >
                     I3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-4 py-2 lg:px-6 lg:py-3 rounded-lg"
                   >
                     I4
                   </p>
                 </div>
+                <!-- Seat Line  J-->
                 <div class="flex items-center justify-between">
                   <p>J</p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     J1
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     J2
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     J3
                   </p>
                   <p
-                    class="bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
+                    class="single-seat bg-[#0307121a] px-3 py-2 lg:px-5 lg:py-3 rounded-lg"
                   >
                     J4
                   </p>
                 </div>
               </div>
             </div>
+            <!-- Seat price set and calculate -->
             <div class="seat-details p-3 lg:p-8 flex-1 w-full lg:max-w-[40%]">
               <h2 class="font-bold text-xl">Seat Price Details</h2>
               <hr class="border-dashed mt-5 mb-5" />
               <div class="bg-[#0307121a] rounded-lg p-8">
                 <div class="flex justify-between">
-                  <p>Seat</p>
+                  <p>
+                    Seat
+                    <span
+                      class="bg-[#1dd100] px-2 py-1 rounded-full"
+                      id="selected-seats"
+                    ></span>
+                  </p>
                   <p>Class</p>
                   <p>Price</p>
                 </div>
                 <hr class="border-dashed my-5" />
                 <!-- Append div -->
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <p>F1</p>
-                    <p>AC</p>
-                    <p>550</p>
-                  </div>
-                  <div class="flex justify-between mb-2">
-                    <p>F1</p>
-                    <p>AC</p>
-                    <p>550</p>
-                  </div>
-                </div>
+                <div id="select-seat-ticket" class="space-y-6"></div>
                 <hr class="border-1 border-black my-5" />
                 <div class="flex justify-between">
                   <p class="font-bold">Total Price</p>
                   <p class="font-bold">
-                    BDT<span class="ml-2 font-bold">1100</span>
+                    BDT<span id="total-ticket-price" class="ml-2 font-bold"
+                      >0</span
+                    >
                   </p>
                 </div>
                 <!-- append coupon price -->
-                <div class="hidden">
+                <div id="discount-div" class="hidden">
                   <div class="flex justify-between">
-                    <p>Coupon Price</p>
-                    <p>BDT <span>0</span></p>
+                    <p>Discount:</p>
+                    <p>BDT <span id="discount-amount">0</span></p>
                   </div>
                 </div>
                 <div class="mt-5">
                   <input
+                    id="coupon-input"
                     class="w-[70%] lg:w-[75%] px-4 py-2 bg-white rounded-lg"
                     type="text"
                     placeholder="Have Any Coupon?"
                   />
-                  <button class="px-3 py-2 bg-[#1dd100] text-white rounded-lg">
+                  <button
+                    id="coupon-btn"
+                    disabled
+                    class="px-3 py-2 bg-[#1dd100] text-white rounded-lg disabled:bg-slate-400"
+                  >
                     Apply
                   </button>
                 </div>
                 <div class="flex justify-between mt-5">
                   <p>Grand Total</p>
-                  <p>BDT <span>0</span></p>
+                  <p>BDT <span id="grand-total">0</span></p>
                 </div>
               </div>
               <form class="mt-5" action="">
@@ -552,8 +575,12 @@
                     placeholder="Email Address"
                   />
                 </div>
-                <button class="py-2 w-full rounded-lg bg-[#1dd100] text-white">
-                  Next
+                <button class="w-full">
+                  <a
+                    href="#my_modal_8"
+                    class="block rounded-lg bg-[#1dd100] py-2 text-white"
+                    >Next</a
+                  >
                 </button>
               </form>
               <div class="flex flex-col lg:flex-row justify-between mt-3">
@@ -566,6 +593,7 @@
       </section>
       <!-- Ticket Area Ends -->
     </main>
+    <!-- Footer Area Starts -->
     <footer class="bg-[#030712] py-20 lg:py-40">
       <div
         class="max-w-[1170px] mx-auto px-3 lg:px-0 flex flex-col lg:flex-row items-center justify-between"
@@ -601,6 +629,33 @@
         </p>
       </div>
     </footer>
+    <!-- Footer Area Ends -->
+
+    <!-- Modal -->
+    <div class="modal" role="dialog" id="my_modal_8">
+      <div class="modal-box text-center p-8">
+        <img
+          class="max-w-[100px] max-h-[100px] mx-auto mb-15"
+          src="./images/success.png"
+          alt=""
+        />
+        <h3 class="font-bold text-3xl text-[#1dd100] mt-15">Success</h3>
+        <p class="py-4 font-bold">
+          Thank You for Booking our Bus Seats.
+          <br />
+          We are working hard to find the best services and deals for you
+        </p>
+        <p>Shortly You will get a confirmation in your Email</p>
+        <div class="modal-action flex items-center justify-center">
+          <a
+            href="#"
+            class="text-white bg-[#1dd100] rounded-full px-28 lg:px-32 py-4 text-xl"
+            >Continue</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
