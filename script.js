@@ -48,6 +48,16 @@ for (const singleSeat of seats) {
     if (selectedSeat >= 4) {
       couponBtn.disabled = false;
     }
+    if (selectedSeat > 0) {
+      const phoneNumber = document.getElementById("phone-number");
+      phoneNumber.addEventListener("keyup", function () {
+        const nextButton = document.getElementById("next-btn");
+        const phoneValue = phoneNumber.value;
+        if (phoneValue !== "") {
+          nextButton.disabled = false;
+        }
+      });
+    }
   }
 }
 document.getElementById("coupon-btn").addEventListener("click", handleCoupon);
@@ -81,3 +91,12 @@ function handleCoupon() {
     couponInput.value = "";
   }
 }
+
+// const phoneNumber = document.getElementById("phone-number");
+// const nextButton = document.getElementById("next-btn");
+// const phoneValue = phoneNumber.value;
+// if (phoneValue) {
+//   nextButton.disabled = false;
+// } else {
+//   nextButton.disabled = true;
+// }
