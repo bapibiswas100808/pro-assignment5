@@ -584,12 +584,11 @@
                 </div>
                 <button
                   onclick="my_modal_1.showModal()"
-                  id="next-btn"
                   disabled
+                  id="next-btn"
                   class="w-full bg-[#1dd100] rounded-lg disabled:bg-gray-400 py-2"
                 >
                   Next
-                  <!-- <a href="#my_modal_8" class="block py-2 text-white">Next</a> -->
                 </button>
               </form>
               <div class="flex flex-col lg:flex-row justify-between mt-3">
@@ -601,6 +600,33 @@
         </div>
       </section>
       <!-- Ticket Area Ends -->
+
+      <!-- Modal -->
+      <dialog class="modal cursor-pointer" id="my_modal_1">
+        <div class="modal-box text-center p-8">
+          <img
+            class="max-w-[100px] max-h-[100px] mx-auto mb-15"
+            src="./images/success.png"
+            alt=""
+          />
+          <h3 class="font-bold text-3xl text-[#1dd100] mt-15">Success</h3>
+          <p class="py-4 font-bold">
+            Thank You for Booking our Bus Seats.
+            <br />
+            We are working hard to find the best services and deals for you
+          </p>
+          <p>Shortly You will get a confirmation in your Email</p>
+          <div class="modal-action flex justify-center">
+            <form method="dialog">
+              <button
+                class="text-white bg-[#1dd100] rounded-full px-28 lg:px-32 py-4 text-xl"
+              >
+                Continue
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <!-- Footer Area Starts -->
     <footer class="bg-[#030712] py-20 lg:py-40">
@@ -640,39 +666,6 @@
     </footer>
     <!-- Footer Area Ends -->
 
-    <!-- Modal -->
-    <dialog class="modal cursor-pointer" id="my_modal_1">
-      <div class="modal-box text-center p-8">
-        <img
-          class="max-w-[100px] max-h-[100px] mx-auto mb-15"
-          src="./images/success.png"
-          alt=""
-        />
-        <h3 class="font-bold text-3xl text-[#1dd100] mt-15">Success</h3>
-        <p class="py-4 font-bold">
-          Thank You for Booking our Bus Seats.
-          <br />
-          We are working hard to find the best services and deals for you
-        </p>
-        <p>Shortly You will get a confirmation in your Email</p>
-        <!-- <div class="modal-action flex items-center justify-center">
-          <a
-            href="#"
-            class="text-white bg-[#1dd100] rounded-full px-28 lg:px-32 py-4 text-xl"
-            >Continue</a
-          >
-        </div> -->
-        <div class="modal-action flex justify-center">
-          <form method="dialog">
-            <button
-              class="text-white bg-[#1dd100] rounded-full px-28 lg:px-32 py-4 text-xl"
-            >
-              Continue
-            </button>
-          </form>
-        </div>
-      </div>
-    </dialog>
     <!-- JavaScript -->
     <script src="script.js"></script>
   </body>

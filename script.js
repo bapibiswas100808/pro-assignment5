@@ -91,12 +91,3 @@ function handleCoupon() {
     couponInput.value = "";
   }
 }
-
-// const phoneNumber = document.getElementById("phone-number");
-// const nextButton = document.getElementById("next-btn");
-// const phoneValue = phoneNumber.value;
-// if (phoneValue) {
-//   nextButton.disabled = false;
-// } else {
-//   nextButton.disabled = true;
-// }
